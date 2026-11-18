@@ -7,6 +7,10 @@ category: app
 version: 0.2.0
 summary: See how much of your digital life you own, area by area, from rented services up to self-hosted.
 license: GPL-3.0-only
+author: Humanity Labs
+tags:
+- productivity
+- security
 source: https://github.com/oscarhenrycollins/sovereignty
 runtime:
   kind: runtipi
