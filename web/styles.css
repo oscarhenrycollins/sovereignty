@@ -1,0 +1,23 @@
+/* Sovereignty-specific styles only. Shared type, rows, colours come from wizard-ui.css. */
+.sv-summary { display: flex; align-items: center; gap: var(--wz-space-4); margin: 4px 8px 8px; }
+.sv-score { flex: none; display: flex; align-items: baseline; color: var(--accent); }
+.sv-score b { font-size: calc(var(--wz-text-title) * 1.6); font-weight: 800; line-height: 1; font-variant-numeric: tabular-nums; }
+.sv-score span { font-size: var(--wz-text-lg); font-weight: 700; margin-left: 2px; }
+.sv-sum-main { flex: 1; min-width: 0; display: grid; gap: 6px; }
+.sv-sum-main strong { color: var(--ink); font-size: var(--wz-text-md); }
+.sv-sum-main small { color: var(--ink-3); font-size: var(--wz-text-sm); }
+.sv-dots { flex: none; display: flex; gap: 4px; }
+.sv-dots i { width: 10px; height: 10px; border-radius: 50%; background: var(--fill-2); border: 1px solid var(--line-2); }
+.sv-dots i.on { background: var(--accent); border-color: var(--accent); }
+.sv-dots.l1 i.on { opacity: .45; } .sv-dots.l2 i.on { opacity: .65; } .sv-dots.l3 i.on { opacity: .85; }
+.sv-via { margin: 0 0 var(--wz-space-3); color: var(--ink-2); font-size: var(--wz-text-md); }
+.sv-ladder { list-style: none; margin: 0 0 var(--wz-space-3); padding: 0; display: grid; gap: 6px; }
+.sv-ladder li { display: flex; align-items: center; gap: 10px; padding: 10px 12px; border-radius: var(--r-tile); border: 1px solid var(--line); color: var(--ink-3); font-size: var(--wz-text-md); }
+.sv-ladder li b { flex: none; width: 22px; height: 22px; border-radius: 50%; display: grid; place-items: center; font-size: var(--wz-text-sm); background: var(--fill); color: var(--ink-2); }
+.sv-ladder li.below { color: var(--ink-2); }
+.sv-ladder li.here { border-color: var(--accent); background: var(--accent-soft); color: var(--ink); font-weight: 650; }
+.sv-ladder li.here b { background: var(--accent); color: var(--on-accent); }
+.sv-ladder li em { margin-left: auto; font-style: normal; font-size: var(--wz-text-sm); color: var(--accent); font-weight: 700; }
+.sv-next { margin-bottom: var(--wz-space-3); }
+.sv-next p { margin: 4px 0 0; color: var(--ink-2); font-size: var(--wz-text-md); }
+.sv-evidence { margin: 0; color: var(--ink-3); font-size: var(--wz-text-sm); }

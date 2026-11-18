@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" data-app="sovereignty">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <title>Sovereignty</title>
+  <script src="boot.js"></script>
+  <link rel="stylesheet" href="wizard-tokens.css">
+  <link rel="stylesheet" href="wizard-ui.css">
+  <link rel="stylesheet" href="standalone.css">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="/wizard-os-home/core/app-client.js"></script>
+  <script defer src="wizard-sheet.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="wz-app">
+    <header class="wz-head"><h1>Sovereignty</h1><p id="checked"></p></header>
+    <main class="wz-scroll">
+      <section class="sv-summary wz-card" aria-labelledby="score-h">
+        <div class="sv-score"><b id="score">–</b><span>%</span></div>
+        <div class="sv-sum-main">
+          <strong id="score-h">How much you own</strong>
+          <div class="wz-meter"><i><b id="score-bar"></b></i></div>
+          <small id="score-note"></small>
+        </div>
+      </section>
+      <div id="groups"></div>
+      <div id="empty" class="wz-empty" hidden>
+        <div class="wz-tile" aria-hidden="true">◎</div>
+        <strong>Nothing rated yet</strong>
+        <p>Ask your agent to check where you stand.</p>
+      </div>
+    </main>
+    <p id="status" class="wz-status" role="status" aria-live="polite"></p>
+  </div>
+  <dialog id="sheet" class="wz-sheet" aria-labelledby="sheet-h">
+    <h2 id="sheet-h"></h2>
+    <p id="sheet-via" class="sv-via"></p>
+    <ol id="sheet-ladder" class="sv-ladder" aria-label="Ladder, highest first"></ol>
+    <div id="sheet-next" class="wz-card sv-next" hidden><strong>Next step up</strong><p></p></div>
+    <p id="sheet-evidence" class="sv-evidence"></p>
+  </dialog>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "round_trip": [
+    {
+      "do": "POST /api/areas",
+      "name": "create",
+      "body": {
+        "id": "verify-{{run}}",
+        "name": "Verify {{run}}",
+        "group": "Test",
+        "rungs": [
+          "a",
+          "b",
+          "c",
+          "d"
+        ],
+        "level": 1
+      },
+      "status": 200
+    },
+    {
+      "do": "GET /api/areas",
+      "name": "list",
+      "expect": {
+        "areas.-1.name": "Verify {{run}}",
+        "areas.-1.level": 1
+      }
+    },
+    {
+      "do": "POST /api/areas",
+      "name": "update",
+      "body": {
+        "id": "verify-{{run}}",
+        "level": 3,
+        "via": "checked"
+      }
+    },
+    {
+      "restart": true
+    },
+    {
+      "do": "GET /api/areas",
+      "name": "read back after restart",
+      "expect": {
+        "areas.-1.name": "Verify {{run}}",
+        "areas.-1.level": 3,
+        "areas.-1.via": "checked"
+      }
+    }
+  ]
+}

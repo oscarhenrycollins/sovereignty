@@ -1,0 +1,8 @@
+{
+  "request": "Show how much of my digital life I own: each area on a ladder from rented services up to self-hosted, where I am now, and the next step up",
+  "template": "hello-wizard",
+  "kind": "hello",
+  "rules": 2,
+  "state": "local_draft",
+  "name": "Sovereignty"
+}

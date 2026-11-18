@@ -1,0 +1,267 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Sovereignty",
+    "version": "0.2.0",
+    "description": "Sovereignty checklist API."
+  },
+  "paths": {
+    "/healthz": {
+      "get": {
+        "summary": "Health and app version",
+        "responses": {
+          "200": {
+            "description": "{ok,app,version}"
+          }
+        }
+      }
+    },
+    "/api/areas": {
+      "get": {
+        "summary": "List areas and score",
+        "responses": {
+          "200": {
+            "description": "Checklist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "score": {
+                      "type": "integer"
+                    },
+                    "levels": {
+                      "type": "integer"
+                    },
+                    "checked": {
+                      "type": "string"
+                    },
+                    "areas": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "group": {
+                            "type": "string"
+                          },
+                          "rungs": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "level": {
+                            "type": "integer"
+                          },
+                          "via": {
+                            "type": "string"
+                          },
+                          "evidence": {
+                            "type": "string"
+                          },
+                          "next": {
+                            "type": "string"
+                          },
+                          "checked": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "summary": "Create or update one area",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "id": {
+                    "type": "string"
+                  },
+                  "name": {
+                    "type": "string"
+                  },
+                  "group": {
+                    "type": "string"
+                  },
+                  "rungs": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "level": {
+                    "type": "integer"
+                  },
+                  "via": {
+                    "type": "string"
+                  },
+                  "evidence": {
+                    "type": "string"
+                  },
+                  "next": {
+                    "type": "string"
+                  },
+                  "checked": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Checklist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "score": {
+                      "type": "integer"
+                    },
+                    "levels": {
+                      "type": "integer"
+                    },
+                    "checked": {
+                      "type": "string"
+                    },
+                    "areas": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "group": {
+                            "type": "string"
+                          },
+                          "rungs": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "level": {
+                            "type": "integer"
+                          },
+                          "via": {
+                            "type": "string"
+                          },
+                          "evidence": {
+                            "type": "string"
+                          },
+                          "next": {
+                            "type": "string"
+                          },
+                          "checked": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/areas/{id}/remove": {
+      "post": {
+        "summary": "Remove an area",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Checklist",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "score": {
+                      "type": "integer"
+                    },
+                    "levels": {
+                      "type": "integer"
+                    },
+                    "checked": {
+                      "type": "string"
+                    },
+                    "areas": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "id": {
+                            "type": "string"
+                          },
+                          "name": {
+                            "type": "string"
+                          },
+                          "group": {
+                            "type": "string"
+                          },
+                          "rungs": {
+                            "type": "array",
+                            "items": {
+                              "type": "string"
+                            }
+                          },
+                          "level": {
+                            "type": "integer"
+                          },
+                          "via": {
+                            "type": "string"
+                          },
+                          "evidence": {
+                            "type": "string"
+                          },
+                          "next": {
+                            "type": "string"
+                          },
+                          "checked": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
