@@ -4,9 +4,10 @@ id: sovereignty
 name: Sovereignty
 type: view
 category: app
-version: 0.2.0
+version: 0.2.1
 summary: See how much of your digital life you own, area by area, from rented services up to self-hosted.
 license: GPL-3.0-only
+icon: icon.png
 author: Humanity Labs
 tags:
 - productivity

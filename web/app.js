@@ -84,7 +84,7 @@ function openArea(a) {
 if (!window.WizardApp || WizardApp.version !== 1) {
   say('Wizard system functions are unavailable. Open this preview through Wizard.', 'error');
 } else {
-  WizardApp.ready({ name: 'sovereignty', version: '0.2.0' });
+  WizardApp.ready({ name: 'sovereignty', version: '0.2.1' });
   WizardApp.back.register({ canGoBack: () => false, back: () => false });
 }
 load().then(render).catch(e => say(e.message, 'error'));

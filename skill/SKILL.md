@@ -1,7 +1,7 @@
 ---
 name: sovereignty
 description: Use when the owner asks how sovereign or self-hosted his setup is, or to update his sovereignty checklist.
-version: 0.2.0
+version: 0.2.1
 author: Hermes Agent
 license: GPL-3.0-only
 platforms: [linux, macos]
